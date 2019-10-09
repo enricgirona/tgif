@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Senate</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -10,40 +11,68 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Senate</title>
   </head>
   <body>
     <script src="senate-115.js"></script>
     <header>
-      <nav class="navbar navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="./index.html">
-          <img class="logo" src="./img/logo.svg" class="d-inline-block align-top" alt="logo" />
-          Transparent Government In Fact
-        </a>
-        <ul class="nav justify-content-end">
-          <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
-          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Congress 115</a><div class="dropdown-menu">
-              <a class="dropdown-item" href="./house-data.html">House</a>
-              <a class="dropdown-item" href="#">Senate</a>
-            </div></li>
-        </ul>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="./index.html">
+            <img class="logo" src="./img/logo.svg" class="d-inline-block align-top" alt="logo" />
+            Transparent Government In Fact
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav ml-auto">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-light"
+                  data-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Congress 115</a
+                >
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./house-data.html">House</a>
+                  <a class="dropdown-item" href="#">Senate</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
-    <main role="main">
-
-        <div class="container info">
-      <div class="page-header">
-        <h2>Senators</h2>
-      </div>
-        <p>First convened in 1789, the composition and powers of the Senate are established in Article One of the U.S. Constitution. Each state is represented by two senators, regardless of population, who serve staggered six-year terms. The Senate has several exclusive powers not granted to the House, including consenting to treaties as a precondition to their ratification and consenting to or confirming appointments of Cabinet secretaries, federal judges, other federal executive officials, military officers, regulatory officials, ambassadors, and other federal uniformed officers, as well as trial of federal officials impeached by the House.</p>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 p-4">
+            <h2>Senators</h2>
+            <p>
+              First convened in 1789, the composition and powers of the Senate are established in Article One of the U.S.
+              Constitution. Each state is represented by two senators, regardless of population, who serve staggered six-year
+              terms. The Senate has several exclusive powers not granted to the House, including consenting to treaties as a
+              precondition to their ratification and consenting to or confirming appointments of Cabinet secretaries, federal
+              judges, other federal executive officials, military officers, regulatory officials, ambassadors, and other federal
+              uniformed officers, as well as trial of federal officials impeached by the House.
+            </p>
+          </div>
         </div>
-        <div class="container">
-        <table id="mainTable" class="table"></table>
+        <div class="row">
+          <div class="col-12">
+            <table id="mainTable" class="table"></table>
+          </div>
+        </div>
       </div>
     </main>
-    <footer class="bg-dark fixed-bottom">
-      <div class="container-fluid"><p>&copy; 2019 TGIF &vert; All Rights Reserved</p></div>
-    </footer>
+    <div class="container">
+      <footer>
+        <p class="text-center py-4">&copy; 2019 TGIF &#124; All Rights Reserved</p>
+      </footer>
+    </div>
     <script src="senate-data.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
