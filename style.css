@@ -47,3 +47,7 @@ main {
 .container.info {
   height: 260px;
 }
+
+.col-4 {
+  background-image: url("./img/transparencia.jpg");
+}
