@@ -1,12 +1,15 @@
-/*document.getElementById("senate-data").innerHTML = JSON.stringify(data);*/
+// Global Variables
+var members = data.results[0].members;
 
-/*console.log(data.results[0].members[11].first_name + " " + data.results[0].members[11].last_name);*/
+// Function Callings
+createTable(members);
 
-function createTable() {
-  var senateTable = document.getElementById("taula1");
+// Function Declaration
+function createTable(array) {
+  var mainTable = document.getElementById("mainTable");
   var tableBody = document.createElement("tbody");
   var tableHead = document.createElement("thead");
-  senateTable.appendChild(tableHead);
+  mainTable.appendChild(tableHead);
   var row = document.createElement("tr");
   tableHead.appendChild(row);
 
@@ -27,35 +30,32 @@ function createTable() {
   row.appendChild(cell4);
   row.appendChild(cell5);
 
-  senateTable.appendChild(tableBody);
+  mainTable.appendChild(tableBody);
 
-  for (var i = 0; data.results[0].members.length > i; i++) {
+  for (var i = 0; array.length > i; i++) {
     var row = document.createElement("tr");
     var cell1 = document.createElement("td");
     var link = document.createElement("a");
-    link.innerHTML =
-      data.results[0].members[i].first_name +
-      " " +
-      (data.results[0].members[i].middle_name || " ") +
-      " " +
-      data.results[0].members[i].last_name;
+    link.innerHTML = array[i].first_name + " " + (array[i].middle_name || " ") + " " + array[i].last_name;
     row.appendChild(cell1);
     cell1.appendChild(link);
-    link.href = data.results[0].members[i].url;
+    link.href = array[i].url;
     var cell2 = document.createElement("td");
-    cell2.innerHTML = data.results[0].members[i].party;
+    cell2.innerHTML = array[i].party;
     row.appendChild(cell2);
     var cell3 = document.createElement("td");
-    cell3.innerHTML = data.results[0].members[i].state;
+    cell3.innerHTML = array[i].state;
     row.appendChild(cell3);
     var cell4 = document.createElement("td");
-    cell4.innerHTML = data.results[0].members[i].seniority;
+    cell4.innerHTML = array[i].seniority;
     row.appendChild(cell4);
     var cell5 = document.createElement("td");
-    cell5.innerHTML = data.results[0].members[i].votes_with_party_pct + " %";
+    if (array[i].votes_with_party_pct == undefined) {
+      cell5.innerHTML = " - ";
+    } else {
+      cell5.innerHTML = array[i].votes_with_party_pct + " %";
+    }
     row.appendChild(cell5);
     tableBody.appendChild(row);
   }
 }
-
-createTable();

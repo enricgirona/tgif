@@ -18,6 +18,7 @@ footer p {
 
 .navbar {
   border-bottom: 1px solid rgb(69, 77, 85);
+  justify-content: space-around;
 }
 
 header {
@@ -30,10 +31,19 @@ footer {
 }
 
 main .container {
-  padding-top: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 main {
   padding-top: 40px;
   padding-bottom: 40px;
+}
+
+.nav-link {
+  color: white;
+}
+
+.container.info {
+  height: 260px;
 }
