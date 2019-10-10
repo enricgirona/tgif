@@ -11,3 +11,10 @@ body {
 .navbar-brand img {
   width: 30px;
 }
+
+.col-6 > div {
+  background-image: url("./img/transparencia.jpg");
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+}
