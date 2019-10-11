@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Transparent Government In Fact</title>
+    <title>Senate Attendance</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -41,8 +41,20 @@
                   <a class="dropdown-item" href="./senate-data.html">Senate</a>
                 </div>
               </li>
-              <li class="nav-item">
-                <a class="nav-link text-light" href="#">Attendance</a>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-light"
+                  data-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Attendance</a
+                >
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./house-attendance.html">House</a>
+                  <a class="dropdown-item" href="#">Senate</a>
+                </div>
               </li>
             </ul>
           </div>
@@ -76,7 +88,35 @@
                   <th>% Voted with Party</th>
                 </tr>
               </thead>
-              <tbody id="table-body"></tbody>
+              <tbody id="at-a-glance"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 flex-align-center">
+            <h3>Least Engaged (Bottom 10% Attendance)</h3>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Nº of Missed Votes</th>
+                  <th>% Missed</th>
+                </tr>
+              </thead>
+              <tbody id="least-engaged"></tbody>
+            </table>
+          </div>
+          <div class="col-6 flex-align-center">
+            <h3>Most Engaged (Top 10% Attendance)</h3>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Nº of Missed Votes</th>
+                  <th>% Missed</th>
+                </tr>
+              </thead>
+              <tbody id="most-engaged"></tbody>
             </table>
           </div>
         </div>
