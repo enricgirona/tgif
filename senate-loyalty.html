@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Senate Attendance</title>
+    <title>Senate Loyalty</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -53,7 +53,7 @@
                 >
                 <div class="dropdown-menu">
                   <a class="dropdown-item" href="./house-attendance.html">House</a>
-                  <a class="dropdown-item" href="#">Senate</a>
+                  <a class="dropdown-item" href="./senate-attendance.html">Senate</a>
                 </div>
               </li>
               <li class="nav-item dropdown">
@@ -68,7 +68,7 @@
                 >
                 <div class="dropdown-menu">
                   <a class="dropdown-item" href="./house-loyalty.html">House</a>
-                  <a class="dropdown-item" href="./senate-loyalty.html">Senate</a>
+                  <a class="dropdown-item" href="#">Senate</a>
                 </div>
               </li>
             </ul>
@@ -80,20 +80,13 @@
       <div class="container">
         <div class="row">
           <div class="col-6 p-4">
-            <h2>Attendance</h2>
+            <h2>Party Loyalty</h2>
             <p>
-              The Constitution specifies that a majority of members constitutes a quorum to do business in each house.
-              Representatives and senators rarely force the presence of a quorum by demanding quorum calls; thus, in most cases,
-              debates continue even if a majority is not present.
-            </p>
-            <p>
-              The Senate uses roll-call votes; a clerk calls out the names of all the senators, each senator stating "aye" or "no"
-              when his or her name is announced. The House reserves roll-call votes for the most formal matters, as a roll-call of
-              all 435 representatives takes quite some time; normally, members vote by electronic device. In the case of a tie,
-              the motion in question fails. In the Senate, the Vice President may (if present) cast the tiebreaking vote.
+              Those who consider themselves to be strong partisans, strong Democrats and strong Republicans respectively, tend to
+              be the most faithful in voting for their party's nominee for office and legislation that backs their party's agenda.
             </p>
           </div>
-          <div class="col-6 flex-align-center">
+          <div class="col-6 flex-align-center p-4">
             <h3>Senate at a Glance</h3>
             <table class="table">
               <thead>
@@ -109,29 +102,29 @@
         </div>
         <div class="row">
           <div class="col-6">
-            <h3>Least Engaged (Bottom 10% Attendance)</h3>
+            <h3>Least Loyal (Bottom 10% Loyalty)</h3>
             <table class="table">
               <thead>
                 <tr>
                   <th>Name</th>
-                  <th>Nº of Missed Votes</th>
-                  <th>% Missed</th>
+                  <th>Nº of Votes with Party</th>
+                  <th>% Party Votes</th>
                 </tr>
               </thead>
-              <tbody id="least-engaged"></tbody>
+              <tbody id="least-loyal"></tbody>
             </table>
           </div>
           <div class="col-6">
-            <h3>Most Engaged (Top 10% Attendance)</h3>
+            <h3>Most Loyal (Top 10% Loyalty)</h3>
             <table class="table">
               <thead>
                 <tr>
                   <th>Name</th>
-                  <th>Nº of Missed Votes</th>
-                  <th>% Missed</th>
+                  <th>Nº of Votes with Party</th>
+                  <th>% Party Votes</th>
                 </tr>
               </thead>
-              <tbody id="most-engaged"></tbody>
+              <tbody id="most-loyal"></tbody>
             </table>
           </div>
         </div>
@@ -142,7 +135,7 @@
         <p class="text-center py-4">&copy; 2019 TGIF &#124; All Rights Reserved</p>
       </footer>
     </div>
-    <script src="functionalities.js"></script>
+    <script src="functionalities-loyalty.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
