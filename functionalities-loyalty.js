@@ -36,7 +36,7 @@ statisticsArray = Object.values(statistics);
 // Function Callings
 fillStatistics(members);
 
-createTable(statisticsArray);
+createGlance(statisticsArray);
 
 engagement(members, "most-loyal", -1, 1);
 
@@ -67,7 +67,7 @@ function fillStatistics(array) {
   statistics.total.loyalty = statistics.total.loyaltyGlobal / statistics.total.number;
 }
 
-function createTable(array) {
+function createGlance(array) {
   for (i = 0; i < array.length; i++) {
     var tableBody = document.getElementById("at-a-glance");
     var newRow = document.createElement("tr");
@@ -89,12 +89,15 @@ function fillTable(array, id, i) {
   var newRow = document.createElement("tr");
   tableBody.appendChild(newRow);
   var cell1 = document.createElement("td");
+  var link = document.createElement("a");
+  link.innerHTML = array[i].first_name + " " + (array[i].middle_name || " ") + " " + array[i].last_name;
+  newRow.appendChild(cell1);
+  cell1.appendChild(link);
+  link.href = array[i].url;
   var cell2 = document.createElement("td");
   var cell3 = document.createElement("td");
-  cell1.innerHTML = array[i].first_name + " " + (array[i].middle_name || " ") + " " + array[i].last_name;
   cell2.innerHTML = ((array[i].total_votes / 100) * array[i].votes_with_party_pct).toFixed(0);
   cell3.innerHTML = array[i].votes_with_party_pct + " %";
-  newRow.appendChild(cell1);
   newRow.appendChild(cell2);
   newRow.appendChild(cell3);
 }

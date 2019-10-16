@@ -79,7 +79,7 @@
     <main>
       <div class="container">
         <div class="row">
-          <div class="col-12 p-4">
+          <div class="col-12  flex-align-center my-4 bg-dark text-light pt-3 mt-1">
             <h2>Senators</h2>
             <p>
               First convened in 1789, the composition and powers of the Senate are established in Article One of the U.S.
@@ -92,8 +92,14 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-12">
-            <table id="mainTable" class="table"></table>
+          <div class="col-12 bg-dark text-light">
+              <div class="checkboxes">
+                  <p>Filter by Party:</p>
+                  <input type="checkbox" id="democrats" onclick="getChange()"/>Democrats</input>
+                  <input type="checkbox" id="republicans" onclick="getChange()"/>Republicans</input>
+                  <input type="checkbox" id="independents" onclick="getChange()"/>Independents</input>
+                </div>
+            <table id="mainTable" class="table table-sm table-dark"></table>
           </div>
         </div>
       </div>

@@ -13,7 +13,7 @@
 }
 
 /*IMAGE*/
-.col-12 > div {
+.main-img {
   background-image: url("./img/transparencia.jpg");
   background-repeat: no-repeat;
   min-height: 100%;
@@ -29,4 +29,15 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+.checkboxes {
+  display: flex;
+  padding-top: 8px;
+}
+
+input[type="checkbox"] {
+  margin-top: 4px;
+  margin-left: 5px;
+  margin-right: 2px;
 }

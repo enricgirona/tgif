@@ -7,18 +7,17 @@ createTable(members);
 // Function Declaration
 function createTable(array) {
   var mainTable = document.getElementById("mainTable");
+  mainTable.innerHTML = "";
   var tableBody = document.createElement("tbody");
   var tableHead = document.createElement("thead");
   mainTable.appendChild(tableHead);
   var row = document.createElement("tr");
   tableHead.appendChild(row);
-
   var cell1 = document.createElement("th");
   var cell2 = document.createElement("th");
   var cell3 = document.createElement("th");
   var cell4 = document.createElement("th");
   var cell5 = document.createElement("th");
-
   cell1.innerHTML = "Name";
   cell2.innerHTML = "Party";
   cell3.innerHTML = "State";
@@ -57,5 +56,24 @@ function createTable(array) {
     }
     row.appendChild(cell5);
     tableBody.appendChild(row);
+  }
+}
+
+// => === function()
+function getChange() {
+  if (
+    document.getElementById("democrats").checked ||
+    document.getElementById("republicans").checked ||
+    document.getElementById("independents").checked
+  ) {
+    var selectedMembers = members.filter(
+      member =>
+        (document.getElementById("democrats").checked && member.party == "D") ||
+        (document.getElementById("republicans").checked && member.party == "R") ||
+        (document.getElementById("independents").checked && member.party == "I")
+    );
+    createTable(selectedMembers);
+  } else {
+    createTable(members);
   }
 }
