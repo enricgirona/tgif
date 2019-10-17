@@ -60,20 +60,34 @@ function createTable(array) {
 }
 
 // => === function()
-function getChange() {
+var firstMembers = members;
+
+function filterState(currentState) {
+  if (currentState == "all-states") {
+    firstMembers = members;
+    filterParty(firstMembers);
+    createTable(finalMembers);
+  } else {
+    firstMembers = members.filter(member => currentState == member.state);
+    filterParty(firstMembers);
+    createTable(finalMembers);
+  }
+}
+
+function filterParty() {
   if (
     document.getElementById("democrats").checked ||
     document.getElementById("republicans").checked ||
     document.getElementById("independents").checked
   ) {
-    var selectedMembers = members.filter(
+    var finalMembers = firstMembers.filter(
       member =>
         (document.getElementById("democrats").checked && member.party == "D") ||
         (document.getElementById("republicans").checked && member.party == "R") ||
         (document.getElementById("independents").checked && member.party == "I")
     );
-    createTable(selectedMembers);
+    createTable(finalMembers);
   } else {
-    createTable(members);
+    createTable(firstMembers);
   }
 }

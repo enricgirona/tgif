@@ -33,11 +33,16 @@
 
 .checkboxes {
   display: flex;
-  padding-top: 8px;
+  padding-top: 16px;
 }
 
 input[type="checkbox"] {
   margin-top: 4px;
   margin-left: 5px;
   margin-right: 2px;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
 }
