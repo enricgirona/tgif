@@ -36,6 +36,10 @@
   padding-top: 16px;
 }
 
+.state-select {
+  margin-top: 16px;
+}
+
 input[type="checkbox"] {
   margin-top: 4px;
   margin-left: 5px;

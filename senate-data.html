@@ -95,72 +95,11 @@
           <div class="col-12 bg-dark text-light filters">
             <div class="checkboxes">
               <p>Filter by Party:</p>
-              <input type="checkbox" id="democrats" onclick="filterParty()" />Democrats
-              <input type="checkbox" id="republicans" onclick="filterParty()" />Republicans
-              <input type="checkbox" id="independents" onclick="filterParty()" />Independents
+              <input type="checkbox" id="democrats" />Democrats <input type="checkbox" id="republicans" />Republicans
+              <input type="checkbox" id="independents" />Independents
             </div>
-            <div class="dropdown checkboxes">
-              <a
-                class="dropdown-toggle text-light"
-                data-toggle="dropdown"
-                href="#"
-                role="button"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Filter by State:</a
-              >
-              <div class="dropdown-menu">
-                <a class="dropdown-item" id="all-states" onclick="filterState(this.id)">All States</a>
-                <a class="dropdown-item" id="AL" onclick="filterState(this.id)">Alabama</a>
-                <a class="dropdown-item" id="AK" onclick="filterState(this.id)">Alaska</a>
-                <a class="dropdown-item" id="AZ" onclick="filterState(this.id)">Arizona</a>
-                <a class="dropdown-item" id="AR" onclick="filterState(this.id)">Arkansas</a>
-                <a class="dropdown-item" id="CA" onclick="filterState(this.id)">California</a>
-                <a class="dropdown-item" id="CO" onclick="filterState(this.id)">Colorado</a>
-                <a class="dropdown-item" id="CT" onclick="filterState(this.id)">Connecticut</a>
-                <a class="dropdown-item" id="DE" onclick="filterState(this.id)">Delaware</a>
-                <a class="dropdown-item" id="FL" onclick="filterState(this.id)">Florida</a>
-                <a class="dropdown-item" id="GA" onclick="filterState(this.id)">Georgia</a>
-                <a class="dropdown-item" id="HI" onclick="filterState(this.id)">Hawaii</a>
-                <a class="dropdown-item" id="ID" onclick="filterState(this.id)">Idaho</a>
-                <a class="dropdown-item" id="IL" onclick="filterState(this.id)">Illinois</a>
-                <a class="dropdown-item" id="IN" onclick="filterState(this.id)">Indiana</a>
-                <a class="dropdown-item" id="IA" onclick="filterState(this.id)">Iowa</a>
-                <a class="dropdown-item" id="KS" onclick="filterState(this.id)">Kansas</a>
-                <a class="dropdown-item" id="KY" onclick="filterState(this.id)">Kentucky</a>
-                <a class="dropdown-item" id="LA" onclick="filterState(this.id)">Louisiana</a>
-                <a class="dropdown-item" id="ME" onclick="filterState(this.id)">Maine</a>
-                <a class="dropdown-item" id="MD" onclick="filterState(this.id)">Maryland</a>
-                <a class="dropdown-item" id="MA" onclick="filterState(this.id)">Massachusetts</a>
-                <a class="dropdown-item" id="MI" onclick="filterState(this.id)">Michigan</a>
-                <a class="dropdown-item" id="MN" onclick="filterState(this.id)">Minnesota</a>
-                <a class="dropdown-item" id="MS" onclick="filterState(this.id)">Mississippi</a>
-                <a class="dropdown-item" id="MO" onclick="filterState(this.id)">Missouri</a>
-                <a class="dropdown-item" id="MT" onclick="filterState(this.id)">Montana</a>
-                <a class="dropdown-item" id="NE" onclick="filterState(this.id)">Nebraska</a>
-                <a class="dropdown-item" id="NV" onclick="filterState(this.id)">Nevada</a>
-                <a class="dropdown-item" id="NH" onclick="filterState(this.id)">New Hampshire</a>
-                <a class="dropdown-item" id="NJ" onclick="filterState(this.id)">New Jersey</a>
-                <a class="dropdown-item" id="NM" onclick="filterState(this.id)">New Mexico</a>
-                <a class="dropdown-item" id="NY" onclick="filterState(this.id)">New York</a>
-                <a class="dropdown-item" id="NC" onclick="filterState(this.id)">North Carolina</a>
-                <a class="dropdown-item" id="ND" onclick="filterState(this.id)">North Dakota</a>
-                <a class="dropdown-item" id="OH" onclick="filterState(this.id)">Ohio</a>
-                <a class="dropdown-item" id="OK" onclick="filterState(this.id)">Oklahoma</a>
-                <a class="dropdown-item" id="OR" onclick="filterState(this.id)">Oregon</a>
-                <a class="dropdown-item" id="PA" onclick="filterState(this.id)">Pennsylvania</a>
-                <a class="dropdown-item" id="RI" onclick="filterState(this.id)">Rhode Island</a>
-                <a class="dropdown-item" id="SC" onclick="filterState(this.id)">South Carolina</a>
-                <a class="dropdown-item" id="TN" onclick="filterState(this.id)">Tennessee</a>
-                <a class="dropdown-item" id="TX" onclick="filterState(this.id)">Texas</a>
-                <a class="dropdown-item" id="UT" onclick="filterState(this.id)">Utah</a>
-                <a class="dropdown-item" id="VT" onclick="filterState(this.id)">Vermont</a>
-                <a class="dropdown-item" id="VA" onclick="filterState(this.id)">Virginia</a>
-                <a class="dropdown-item" id="WA" onclick="filterState(this.id)">Washington</a>
-                <a class="dropdown-item" id="WV" onclick="filterState(this.id)">West Virginia</a>
-                <a class="dropdown-item" id="WI" onclick="filterState(this.id)">Wisconsin</a>
-                <a class="dropdown-item" id="WY" onclick="filterState(this.id)">Wyoming</a>
-              </div>
+            <div class="state-select">
+              <select id="states"> </select>
             </div>
           </div>
         </div>
@@ -176,7 +115,7 @@
         <p class="text-center py-4">&copy; 2019 TGIF &#124; All Rights Reserved</p>
       </footer>
     </div>
-    <script src="senate-data.js"></script>
+    <script src="data.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
