@@ -40,11 +40,7 @@ var currentState;
 var data = [];
 
 // Fetch
-if (
-  window.location.href == "http://127.0.0.1:5500/senate-attendance.html" ||
-  window.location.href == "http://127.0.0.1:5500/senate-loyalty.html" ||
-  window.location.href == "http://127.0.0.1:5500/senate-data.html"
-) {
+if (window.location.pathname.includes("senate") == true) {
   fetch("https://api.propublica.org/congress/v1/113/senate/members.json", {
     method: "GET",
     headers: {
@@ -81,10 +77,7 @@ if (
 }
 
 // EventListeners
-if (
-  window.location.href == "http://127.0.0.1:5500/senate-data.html" ||
-  window.location.href == "http://127.0.0.1:5500/house-data.html"
-) {
+if (window.location.pathname.includes("data") == true) {
   document.getElementById("states").addEventListener("change", filter);
   document.getElementById("democrats").addEventListener("click", filter);
   document.getElementById("republicans").addEventListener("click", filter);
@@ -93,20 +86,14 @@ if (
 
 // Function Declaration
 function init() {
-  if (
-    window.location.href == "http://127.0.0.1:5500/senate-data.html" ||
-    window.location.href == "http://127.0.0.1:5500/house-data.html"
-  ) {
+  if (window.location.pathname.includes("data") == true) {
     createTable(members);
     getStates();
   } else {
     fillStatistics(members);
 
     createGlance(statisticsArray);
-    if (
-      window.location.href == "http://127.0.0.1:5500/senate-attendance.html" ||
-      window.location.href == "http://127.0.0.1:5500/house-attendance.html"
-    ) {
+    if (window.location.pathname.includes("attendance") == true) {
       engagement(members, "least-engaged", -1, 1, "missed_votes_pct", "missed_votes");
 
       engagement(members, "most-engaged", 1, -1, "missed_votes_pct", "missed_votes");
