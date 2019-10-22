@@ -81,10 +81,15 @@ if (
 }
 
 // EventListeners
-document.getElementById("states").addEventListener("change", filter);
-document.getElementById("democrats").addEventListener("click", filter);
-document.getElementById("republicans").addEventListener("click", filter);
-document.getElementById("independents").addEventListener("click", filter);
+if (
+  window.location.href == "http://127.0.0.1:5500/senate-data.html" ||
+  window.location.href == "http://127.0.0.1:5500/house-data.html"
+) {
+  document.getElementById("states").addEventListener("change", filter);
+  document.getElementById("democrats").addEventListener("click", filter);
+  document.getElementById("republicans").addEventListener("click", filter);
+  document.getElementById("independents").addEventListener("click", filter);
+}
 
 // Function Declaration
 function init() {
