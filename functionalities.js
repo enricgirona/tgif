@@ -89,13 +89,13 @@ if (window.location.pathname.includes("data") == true) {
 }
 
 // Function Calls
-loading("loading-page");
+loading();
 
 // Function Declaration
-function loading(id) {
+function loading() {
   var loader = document.createElement("div");
   loader.classList.add("spinner-border", "text-light");
-  document.getElementById(id).appendChild(loader);
+  document.getElementById("loading-page").appendChild(loader);
 }
 
 function init() {
@@ -152,7 +152,7 @@ function createGlance(array) {
     var cell3 = document.createElement("td");
     cell1.innerHTML = array[i].party;
     cell2.innerHTML = array[i].number;
-    cell3.innerHTML = array[i].loyalty.toFixed(2) + " %" || "0";
+    cell3.innerHTML = (array[i].loyalty || 0).toFixed(2) + " %";
     newRow.appendChild(cell1);
     newRow.appendChild(cell2);
     newRow.appendChild(cell3);
