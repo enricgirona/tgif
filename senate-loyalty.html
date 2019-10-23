@@ -14,11 +14,10 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
           <a class="navbar-brand" href="./index.html">
             <img src="./img/logo.svg" class="d-inline-block align-top" alt="logo" />
-            TGIF
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
             <span class="navbar-toggler-icon"></span>
@@ -27,7 +26,7 @@
             <ul class="nav ml-auto">
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle text-light"
+                  class="nav-link dropdown-toggle text-dark"
                   data-toggle="dropdown"
                   href="#"
                   role="button"
@@ -42,7 +41,7 @@
               </li>
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle text-light"
+                  class="nav-link dropdown-toggle text-dark"
                   data-toggle="dropdown"
                   href="#"
                   role="button"
@@ -57,7 +56,7 @@
               </li>
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle text-light"
+                  class="nav-link dropdown-toggle text-dark"
                   data-toggle="dropdown"
                   href="#"
                   role="button"
@@ -76,55 +75,65 @@
       </nav>
     </header>
     <main>
+      <div id="loading-page"></div>
       <div class="container">
-        <div class="row">
-          <div class="col-6 flex-align-center my-4 bg-dark text-light pt-3 mt-1">
-            <h2>Party Loyalty</h2>
-            <p>
-              Those who consider themselves to be strong partisans, strong Democrats and strong Republicans respectively, tend to
-              be the most faithful in voting for their party's nominee for office and legislation that backs their party's agenda.
-            </p>
+        <div class="row justify-content-between">
+          <div class="col-6 pl-0 flex-align-center">
+            <div class="bg-dark flex-align-center my-4 text-light pt-3 mt-1 rounded p-3">
+              <h4>Party Loyalty</h4>
+              <p>
+                Those who consider themselves to be strong partisans, strong Democrats and strong Republicans respectively, tend
+                to be the most faithful in voting for their party's nominee for office and legislation that backs their party's
+                agenda.
+              </p>
+            </div>
           </div>
-          <div class="col-6 flex-align-center my-4 bg-dark text-light pt-3 mt-1">
-            <h3>Senate at a Glance</h3>
-            <table class="table table-sm table-dark">
-              <thead>
-                <tr>
-                  <th>Party</th>
-                  <th>Members</th>
-                  <th>% Voted with Party</th>
-                </tr>
-              </thead>
-              <tbody id="at-a-glance"></tbody>
-            </table>
+          <div class="col-6 pr-0">
+            <div class="bg-dark flex-align-center my-4 text-light pt-3 mt-1 rounded p-3">
+              <h4>Senate at a Glance</h4>
+              <table class="table table-sm table-dark">
+                <thead>
+                  <tr>
+                    <th>Party</th>
+                    <th>Members</th>
+                    <th>% Voted with Party</th>
+                  </tr>
+                </thead>
+                <tbody id="at-a-glance"></tbody>
+              </table>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-6  bg-dark text-light pt-3 mt-1">
-            <h3>Least Loyal (Bottom 10% Loyalty)</h3>
-            <table class="table table-sm table-dark">
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Nº of Total Votes</th>
-                  <th>% Party Votes</th>
-                </tr>
-              </thead>
-              <tbody id="least-loyal"></tbody>
-            </table>
+        <div class="row justify-content-between">
+          <div class="col-6 pl-0">
+            <div class="bg-dark flex-align-center my-4 text-light pt-3 mt-1 rounded p-3">
+              <h4>Least Loyal (Bottom 10% Loyalty)</h4>
+              <table class="table table-sm table-dark">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Nº of Total Votes</th>
+                    <th>% Party Votes</th>
+                  </tr>
+                </thead>
+                <tbody id="least-loyal"></tbody>
+              </table>
+            </div>
           </div>
-          <div class="col-6 bg-dark text-light pt-3 mt-1">
-            <h3>Most Loyal (Top 10% Loyalty)</h3>
-            <table class="table table-sm table-dark">
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Nº of Total Votes</th>
-                  <th>% Party Votes</th>
-                </tr>
-              </thead>
-              <tbody id="most-loyal"></tbody>
-            </table>
+          <div class="col-6 pr-0">
+            <div class="bg-dark flex-align-center my-4 text-light pt-3 mt-1 rounded p-3">
+              <h4>Most Loyal (Top 10% Loyalty)</h4>
+              <table class="table table-sm table-dark">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Nº of Total Votes</th>
+                    <th>% Party Votes</th>
+                  </tr>
+                </thead>
+                <tbody id="most-loyal"></tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>

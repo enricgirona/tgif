@@ -15,11 +15,10 @@
   <body>
     <script src="functionalities.js"></script>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
           <a class="navbar-brand" href="./index.html">
             <img src="./img/logo.svg" class="d-inline-block align-top" alt="logo" />
-            TGIF
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
             <span class="navbar-toggler-icon"></span>
@@ -28,7 +27,7 @@
             <ul class="nav ml-auto">
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle text-light"
+                  class="nav-link dropdown-toggle text-dark"
                   data-toggle="dropdown"
                   href="#"
                   role="button"
@@ -43,7 +42,7 @@
               </li>
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle text-light"
+                  class="nav-link dropdown-toggle text-dark"
                   data-toggle="dropdown"
                   href="#"
                   role="button"
@@ -58,7 +57,7 @@
               </li>
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle text-light"
+                  class="nav-link dropdown-toggle text-dark"
                   data-toggle="dropdown"
                   href="#"
                   role="button"
@@ -77,62 +76,72 @@
       </nav>
     </header>
     <main>
+      <div id="loading-page"></div>
       <div class="container">
-        <div class="row">
-          <div class="col-6 flex-align-center my-4 bg-dark text-light pt-3 mt-1">
-            <h2>Attendance</h2>
-            <p>
-              The Constitution specifies that a majority of members constitutes a quorum to do business in each house.
-              Representatives and senators rarely force the presence of a quorum by demanding quorum calls; thus, in most cases,
-              debates continue even if a majority is not present.
-            </p>
-            <p>
-              The Senate uses roll-call votes; a clerk calls out the names of all the senators, each senator stating "aye" or "no"
-              when his or her name is announced. The House reserves roll-call votes for the most formal matters, as a roll-call of
-              all 435 representatives takes quite some time; normally, members vote by electronic device. In the case of a tie,
-              the motion in question fails. In the Senate, the Vice President may (if present) cast the tiebreaking vote.
-            </p>
+        <div class="row  justify-content-between">
+          <div class="col-6 pl-0">
+            <div class="bg-dark flex-align-center my-4 text-light pt-3 mt-1 rounded p-3">
+              <h4>Attendance</h4>
+              <p>
+                The Constitution specifies that a majority of members constitutes a quorum to do business in each house.
+                Representatives and senators rarely force the presence of a quorum by demanding quorum calls; thus, in most cases,
+                debates continue even if a majority is not present.
+              </p>
+              <p>
+                The Senate uses roll-call votes; a clerk calls out the names of all the senators, each senator stating "aye" or
+                "no" when his or her name is announced. The House reserves roll-call votes for the most formal matters, as a
+                roll-call of all 435 representatives takes quite some time; normally, members vote by electronic device. In the
+                case of a tie, the motion in question fails. In the Senate, the Vice President may (if present) cast the
+                tiebreaking vote.
+              </p>
+            </div>
           </div>
-          <div class="col-6 flex-align-center my-4 bg-dark text-light pt-3 mt-1">
-            <h3>House at a Glance</h3>
-            <table class="table table-sm table-dark">
-              <thead>
-                <tr>
-                  <th>Party</th>
-                  <th>Members</th>
-                  <th>% Voted with Party</th>
-                </tr>
-              </thead>
-              <tbody id="at-a-glance"></tbody>
-            </table>
+          <div class="col-6 pr-0 flex-align-center">
+            <div class="bg-dark flex-align-center my-4 text-light pt-3 mt-1 rounded p-3">
+              <h4>House at a Glance</h4>
+              <table class="table table-sm table-dark">
+                <thead>
+                  <tr>
+                    <th>Party</th>
+                    <th>Members</th>
+                    <th>% Voted with Party</th>
+                  </tr>
+                </thead>
+                <tbody id="at-a-glance"></tbody>
+              </table>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-6  bg-dark text-light pt-3 mt-1">
-            <h3>Least Engaged (Bottom 10% Attendance)</h3>
-            <table class="table table-sm table-dark">
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Nº of Missed Votes</th>
-                  <th>% Missed</th>
-                </tr>
-              </thead>
-              <tbody id="least-engaged"></tbody>
-            </table>
+        <div class="row justify-content-between">
+          <div class="col-6  pl-0">
+            <div class="bg-dark flex-align-center my-4 text-light pt-3 mt-1 rounded p-3">
+              <h4>Least Engaged (Bottom 10% Attendance)</h4>
+              <table class="table table-sm table-dark">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Nº of Missed Votes</th>
+                    <th>% Missed</th>
+                  </tr>
+                </thead>
+                <tbody id="least-engaged"></tbody>
+              </table>
+            </div>
           </div>
-          <div class="col-6  bg-dark text-light pt-3 mt-1">
-            <h3>Most Engaged (Top 10% Attendance)</h3>
-            <table class="table table-sm table-dark">
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Nº of Missed Votes</th>
-                  <th>% Missed</th>
-                </tr>
-              </thead>
-              <tbody id="most-engaged"></tbody>
-            </table>
+          <div class="col-6  pr-0">
+            <div class="bg-dark flex-align-center my-4 text-light pt-3 mt-1 rounded p-3">
+              <h4>Most Engaged (Top 10% Attendance)</h4>
+              <table class="table table-sm table-dark">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Nº of Missed Votes</th>
+                    <th>% Missed</th>
+                  </tr>
+                </thead>
+                <tbody id="most-engaged"></tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
