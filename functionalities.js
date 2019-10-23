@@ -283,8 +283,20 @@ function filter() {
           (document.getElementById("independents").checked && member.party == "I")
       );
       createTable(finalMembers);
+      if (finalMembers[0] == null) {
+        var alert = document.getElementById("mainTable");
+        var alertMessage = document.createElement("p");
+        alertMessage.innerHTML = "Sorry, there's no data to display with this requeriments...";
+        alert.appendChild(alertMessage);
+      }
     } else {
       createTable(firstMembers);
+      if (firstMembers[0] == null) {
+        var alert = document.getElementById("mainTable");
+        var alertMessage = document.createElement("p");
+        alertMessage.innerHTML = "Sorry, there's no data to display with this requeriments...";
+        alert.appendChild(alertMessage);
+      }
     }
   } else {
     firstMembers = members.filter(member => selector.value == member.state);
@@ -300,8 +312,20 @@ function filter() {
           (document.getElementById("independents").checked && member.party == "I")
       );
       createTable(finalMembers);
+      if (finalMembers[0] == null) {
+        var alert = document.getElementById("mainTable");
+        var alertMessage = document.createElement("p");
+        alertMessage.innerHTML = "Sorry, there's no data to display with this requeriments...";
+        alert.appendChild(alertMessage);
+      }
     } else {
       createTable(firstMembers);
+      if (firstMembers[0] == null) {
+        var alert = document.getElementById("mainTable");
+        var alertMessage = document.createElement("p");
+        alertMessage.innerHTML = "Sorry, there's no data to display with this requeriments...";
+        alert.appendChild(alertMessage);
+      }
     }
   }
 }
